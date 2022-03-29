@@ -49,8 +49,7 @@ def cv2_imshow(a, convert_bgr_to_rgb=True, write_image=True, write_path=None):
       cv2.imwrite(write_path)
       
       
-In [10]:
+
 result = overlay_bbox_cv(meta['raw_img'], res[0], cfg.class_names, score_thresh=0.35)
-In [11]:
 imshow_scale = 1.0
 cv2_imshow(cv2.resize(result, None, fx=imshow_scale, fy=imshow_scale))
